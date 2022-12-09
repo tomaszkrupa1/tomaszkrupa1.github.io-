@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+
+This is an example website, using the Web-Based-Windows stylesheets and scripts.
+
+Jack Guianane
+2018-07-31
+
+-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Windows</title>
+
+        <!-- Required scripts and stylesheets -->
+        <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <script src="draggable.js" type="text/javascript"></script>
+
+        <!-- Additional stylesheets below, for custom window styling -->
+        <link href="example-style.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+
+        <div class="window" id="about" style="width:390px;">
+            <div class="window-header" id="aboutheader">
+                About.txt
+                <button onclick="this.parentNode.parentNode.style.display = 'none';">X</button>
+                <button onclick="this.parentNode.parentNode.style.display = 'none';">_</button>
+            </div>
+            
+            <p>Welcome to my page</p>
+            <p>Tomasz Krupa</p>
+            <p></p>
+            
+        </div>
+        <script>dragElement(document.getElementById("about"));</script>
+
+        <div class="window install-page" id="install" style="top:50px;left:100px;">
+            <div class="window-header" id="installheader">
+                Installation Wizard
+                <button onclick="this.parentNode.parentNode.style.display = 'none';">X</button>
+                <button onclick="this.parentNode.parentNode.style.display = 'none';">_</button>
+            </div>
+            
+            <p>>: How to use</p>
+            <p>Start by downloading the CSS and Javascript files used in the source.</p>
+            <a href="">Download from Github</a>
+            <p>>: Add them to HTML</p>
+            <p>Add the following lines to your &lt;head>:<br></p>
+            <p>&nbsp;&nbsp;&lt;link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet"><br>&nbsp;&nbsp;&lt;link href="style.css" rel="stylesheet" type="text/css"><br>&nbsp;&nbsp;&lt;script src="draggable.js" type="text/javascript">&lt;/script></p>
+            <p>>: Create a window</p>
+            <p>Replace with new ID tags and content:</p>
+            <p>&nbsp;&nbsp;&lt;div class="window" id="ADD_CUSTOM_ID">
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="window-header" id="ADD_CUSTOM_IDheader">
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TITLE_OF_WINDOW
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button onclick="this.parentNode.parentNode.style.display = 'none';">X&lt;/button>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button onclick="this.parentNode.parentNode.style.display = 'none';">_&lt;/button>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;CONTENTS_OF_WINDOW
+            <br>&nbsp;&nbsp;&lt;/div>
+            <br>&nbsp;&nbsp;&lt;script>dragElement(document.getElementById("ADD_CUSTOM_ID"));&lt;/script></p>
+            
+        </div>
+        <script>dragElement(document.getElementById("install"));</script>
+        
+        <div class="window baby-image" id="image" style="width:200px;height:400px;top:200px;left:800px;">
+            <div class="window-header" id="imageheader">
+                Dancing-Baby.jpg
+                <button onclick="this.parentNode.parentNode.style.display = 'none';">X</button>
+                <button onclick="this.parentNode.parentNode.style.display = 'none';">_</button>
+            </div>
+        </div>
+        <script>dragElement(document.getElementById("image"));</script>
+        
+        <div class="window alert-page" id="alert" style="width:400px;left:900px;top:50px;">
+            <div class="window-header" id="alertheader">
+                Alert
+                <button onclick="this.parentNode.parentNode.style.display = 'none';">X</button>
+                <button onclick="this.parentNode.parentNode.style.display = 'none';">_</button>
+            </div>
+            
+            <p>Windows encountered an error.</p>
+            <button class="classic-button" onclick="this.parentNode.style.display = 'none';">OK</button>
+            
+        </div>
+        <script>dragElement(document.getElementById("alert"));</script>
+        
+    </body>
+</html>

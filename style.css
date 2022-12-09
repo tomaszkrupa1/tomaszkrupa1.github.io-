@@ -1,0 +1,102 @@
+/*
+ *  Stylesheet for Web-Based-Windows
+ *  
+ *  Jack Guinane
+ *  2018-07-31
+ */
+
+html
+{
+    overflow: hidden;
+}
+
+button
+{
+    border-right: solid 2px #87888E;
+    border-bottom: solid 2px #87888E;
+    box-shadow: 0px 0px 0px 2px rgba(0,0,0,1);
+    background-color: #C1C7C8;
+    cursor: pointer;
+    float: right;
+    font-family: 'VT323', monospace;
+    font-size: 1.0rem;
+    font-weight: 900;
+    margin-left: 2px;
+    user-select: none;
+    height: 22px;
+}
+
+button:active
+{
+    background-color: #87888E;
+}
+
+.window 
+{
+    position: absolute;
+    z-index: 9;
+    background-color: #fff;
+    border: 3px solid #C1C7C8;
+    text-align: center;    
+    padding: 2px;
+    resize: both;
+    overflow: auto;
+    font-family: 'VT323', monospace;
+    font-size: 1.4rem;
+    box-shadow: inset 0px 0px 0px 2px rgba(0,0,0,1), 0px 0px 0px 2px rgba(0,0,0,1);
+    border-bottom-color: #5f6064;
+    border-right-color: #5f6064;
+    min-width: 280px;
+    min-height: 50px;
+    overflow-y: hidden;
+}
+
+.window-header
+{
+    position: sticky;
+    text-align: center;
+    cursor: move;
+    z-index: 10;
+    padding-left: 3rem;
+    background-color: #0200A1;
+    color: #fff;
+    font-family: 'VT323', monospace;
+    border-bottom: 2px solid #000;
+    user-select: none;
+}
+
+.classic-button
+{
+    box-shadow:
+        -1px -1px 0px 1px rgba(255,255,255,1),
+        0px 0px 0px 2px rgba(0,0,0,1);
+    background-color: #C0C0C0;
+    float: none;
+    font-size: 1.2rem;
+    padding: 0 20px;
+    margin: 0;
+    height: auto;
+    font-weight: 100;
+    
+    border-right: solid 2px #808080;
+    border-bottom: solid 2px #808080;
+    border-top: solid 2px #E0E0E0;
+    border-left: solid 2px #E0E0E0;
+}
+
+.classic-button:active
+{
+    border-bottom: solid 2px #C0C0C0;
+    border-right: solid 2px #C0C0C0;
+    border-left: solid 2px #000;
+    border-top: solid 2px #000;
+    background-color: #808080;
+    box-shadow:
+        -1px -1px 0px 1px #000,
+        0px 0px 0px 2px #000;
+}
+
+.classic-button:focus
+{
+    outline: 0;
+}
