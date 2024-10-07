@@ -1,21 +1,15 @@
 @import url('https://fonts.cdnfonts.com/css/akira-expanded');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  background: linear-gradient(to bottom, #0a0a0a, #191919);
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #0a0a0a, #252525);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   font-family: 'Akira Expanded', sans-serif;
-}
-
-.App {
-  text-align: center;
-  height: 100vh; /* Full viewport height */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
 }
 
 .container {
@@ -23,37 +17,4 @@ body, html {
   max-width: 1200px; /* Optional: set a max-width */
   margin: 0 auto; /* Center the container */
   padding: 0 20px; /* Add padding on the sides */
-}
-
-.App-header {
-  width: 100%;
-  text-align: right;
-  padding: 20px;
-  position: relative; /* Needed for absolute positioning of animated text */
-  overflow: hidden; /* Hide overflow of animated text */
-}
-
-.App-header h1 {
-  font-size: 4em; /* Adjust the size as needed */
-  margin: 0;
-  position: relative; /* Needed for layering */
-  z-index: 1; /* Ensure it is above the animated text */
-}
-
-.animated-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 300%; /* Increase the height to show more text */
-  overflow: hidden;
-  z-index: 0; /* Ensure it is behind the main text */
-}
-
-.animated-text p {
-  font-size: 4em; /* Same size as the main text */
-  margin: 0;
-  color: transparent; 
-  -webkit-text-stroke: 1px white; 
-  opacity: 0.08; 
 }

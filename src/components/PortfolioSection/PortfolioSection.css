@@ -1,0 +1,94 @@
+.portfolio-section {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    color: white;
+    background-color: rgba(41, 41, 41, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Ensure 2 projects per row */
+    gap: 20px;
+  }
+  
+  .project-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 400px; /* Set a fixed height for the cards */
+    transition: transform 0.2s ease; /* Smooth transition for the card */
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire card */
+    display: block;
+    transition: transform 0.3s ease; /* Smooth transition for the image */
+  }
+
+  /* Add this new class for the language tag */
+.language-tag {
+  color: white;
+  border: 1px solid white;
+  border-radius: 45px;
+  padding: 5px 10px;
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 0.8em; /* Adjust font size as needed */
+}
+  
+ /* Update the .project-info class to include the language tag */
+.project-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px;
+  width: 100%;
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font to the card info */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+  
+  .project-info h3 {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: 700; /* Set a bigger weight for the title */
+  }
+  
+  .project-info p {
+    margin: 5px 0 0;
+    font-size: 0.9em; /* Make the description smaller than the title */
+    font-weight: 400; /* Set a smaller weight for the description */
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .portfolio-grid {
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .portfolio-grid {
+      grid-template-columns: 1fr; /* Ensure 1 project per row on small screens */
+    }
+  }
+  
+  /* Style for "MY PROJECTS" text */
+  .my-projects-title {
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  .project-card:hover img {
+    transform: scale(1.1); /* Scale the image up on hover */
+  }
